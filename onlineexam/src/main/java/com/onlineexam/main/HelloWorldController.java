@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController  
 public class HelloWorldController   
 {  
-@RequestMapping("/HelloWorld")  
+@RequestMapping("/onlineexam/helloworld")  
 public String hello()   
 {  
 return "Hello javaTpoint";  
