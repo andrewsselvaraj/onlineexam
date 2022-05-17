@@ -18,7 +18,7 @@ import javax.persistence.Id;
 @Builder
   
 // Class  
-public class UserInformation {
+public class User_details {
   
     @Id
     private String user_id; 
