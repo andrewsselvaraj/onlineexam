@@ -13,7 +13,7 @@ public class UserController {
 	@GetMapping("/userDetails")
     public List<com.onlineexam.model.UserInformation> fetchDepartmentList()
     {
-        return null;
+        return userService.fetchUserDetailsList();
     }
 	
 }
