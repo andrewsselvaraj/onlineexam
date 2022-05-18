@@ -1,4 +1,4 @@
-package com.onlineexam.main;
+package com.onlineexam.main.component;
 
 
 import java.io.Serializable;

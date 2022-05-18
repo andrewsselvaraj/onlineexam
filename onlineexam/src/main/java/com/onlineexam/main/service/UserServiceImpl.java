@@ -1,14 +1,19 @@
 package com.onlineexam.main.service;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.onlineexam.main.model.User_details;
 import com.onlineexam.main.repository.UserRepository;
+
+import io.jsonwebtoken.Jwts;
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -25,10 +30,37 @@ public class UserServiceImpl implements UserService{
 		return userRepository.findAll();
 	}
 	@Override
-	public Optional<User_details> findByUser_nameAndUser_password(String userName, String password) {
+	public HashMap<String,String> getTokenAfterLogin(String userName,String password)
+	
+	{
+		HashMap<String,String> hm= new HashMap<String,String>();
 		// TODO Auto-generated method stub
-		return userRepository.findById(userName);
+		long millis = System.currentTimeMillis();  
+		Date startDate = new Date(millis);
 		
+		Date endDate = new Date(millis+10000);
+		User_details x= userRepository.getById(userName);
+		
+
+		        String jwtToken = Jwts.builder()
+				        .claim("name",x.getUser_id())
+				        .claim("email", x.getUser_email())
+				        .setSubject(x.getUser_role())
+				        .setId(UUID.randomUUID().toString())
+				        
+				        .setIssuedAt(startDate)
+				        .setExpiration(endDate)
+				        .compact();
+		        hm.put("name", x.getUser_id());
+		        hm.put("email", x.getUser_role());
+		        hm.put("token", jwtToken);
+		        return hm;
+		
+	}
+	@Override
+	public User_details findByUser_nameAndUser_password(String userName, String password) {
+		// TODO Auto-generated method stub
+		return  userRepository.getById(userName);
 	}
 
 
