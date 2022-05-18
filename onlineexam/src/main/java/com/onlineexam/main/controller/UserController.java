@@ -3,6 +3,9 @@ package com.onlineexam.main.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,9 +35,21 @@ public class UserController {
     }
     
 	@RequestMapping(value = "/login", method =  RequestMethod.GET)
-    public HashMap<String, String> login(@RequestParam("userName") String userName,@RequestParam("password") String password)
+    public HashMap<String, String> login(HttpServletResponse response,@RequestParam("userName") String userName,@RequestParam("password") String password)
     {
-        return userService.getTokenAfterLogin(userName, password);
+		
+		HashMap<String, String> hm = userService.getTokenAfterLogin(userName, password);
+		Cookie cookie = new Cookie("name", hm.get("name"));
+		response.addCookie(cookie);
+		
+		Cookie cookie1 = new Cookie("email", hm.get("email"));
+		response.addCookie(cookie1);
+		
+		Cookie cookie2 = new Cookie("token", hm.get("token"));
+		response.addCookie(cookie2);
+
+        
+        return hm;
        
     }
 	
