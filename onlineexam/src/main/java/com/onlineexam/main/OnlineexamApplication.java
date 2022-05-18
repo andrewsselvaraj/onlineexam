@@ -8,6 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
@@ -50,6 +55,21 @@ public class OnlineexamApplication {
 	
 		System.out.println("\n"+jwtToken);
 		
+		/*
+		try(Connection conn = DriverManager.getConnection("jdbc:mysql://107.155.116.31:3306/inventory_v_one", "root", "Admin@123#");
+		         Statement stmt = conn.createStatement();
+		         ResultSet rs = stmt.executeQuery("select * from user_details");
+		      ) {		      
+		         while(rs.next()){
+		            //Display values
+		            System.out.print("ID: " + rs.getInt("user_id"));
+		            System.out.print(", Age: " + rs.getInt("user_name"));
+
+		         }
+		      } catch (SQLException e) {
+		         e.printStackTrace();
+		      } 
+		*/
 	}
 
 }

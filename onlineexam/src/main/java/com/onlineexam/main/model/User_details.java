@@ -1,4 +1,4 @@
-package com.onlineexam.model;
+package com.onlineexam.main.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
