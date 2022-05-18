@@ -2,6 +2,7 @@ package com.onlineexam.main.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,12 @@ public class UserServiceImpl implements UserService{
 		//return al;
 		return userRepository.findAll();
 	}
+	@Override
+	public Optional<User_details> findByUser_nameAndUser_password(String userName, String password) {
+		// TODO Auto-generated method stub
+		return userRepository.findById(userName);
+		
+	}
+
 
 }
