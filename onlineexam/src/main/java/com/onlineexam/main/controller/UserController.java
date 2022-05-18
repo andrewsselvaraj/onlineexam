@@ -27,8 +27,14 @@ public class UserController {
         return userService.fetchUserDetailsList();
     }
     
-	@RequestMapping(value = "/userInfo", method =  RequestMethod.POST)
+	@RequestMapping(value = "/userInfo", method =  RequestMethod.GET)
     public Optional<User_details> findByUserNameandPassword(@RequestParam("userName") String userName,@RequestParam("password") String password)
+    {
+        return userService.findByUser_nameAndUser_password(userName, password);
+    }
+    
+	@RequestMapping(value = "/login", method =  RequestMethod.POST)
+    public Optional<User_details> login(@RequestParam("userName") String userName,@RequestParam("password") String password)
     {
         return userService.findByUser_nameAndUser_password(userName, password);
     }
