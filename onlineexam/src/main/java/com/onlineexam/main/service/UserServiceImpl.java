@@ -18,16 +18,20 @@ import io.jsonwebtoken.Jwts;
 public class UserServiceImpl implements UserService{
 
 	@Autowired
+	
     private UserRepository userRepository;
 	@Override
 	public List<User_details> fetchUserDetailsList() {
 		// TODO Auto-generated method stub
 		//return userRepository.findAll();\
-		User_details us = new User_details();
-		ArrayList<User_details> al = new ArrayList<User_details>();
-		al.add(us);
+		//User_details us = new User_details();
+		//ArrayList<User_details> al = new ArrayList<User_details>();
+		//al.add(us);
 		//return al;
-		return userRepository.findAll();
+		
+		List<User_details> x = userRepository.findAll();
+		
+		return x;
 	}
 	@Override
 	public HashMap<String,String> getTokenAfterLogin(String userName,String password)
@@ -61,6 +65,12 @@ public class UserServiceImpl implements UserService{
 	public User_details findByUser_nameAndUser_password(String userName, String password) {
 		// TODO Auto-generated method stub
 		return  userRepository.getById(userName);
+	}
+	@Override
+	public List<User_details> fetchAllUserDetailsList() {
+List<User_details> x = userRepository.findAll();
+		
+		return x;
 	}
 
 

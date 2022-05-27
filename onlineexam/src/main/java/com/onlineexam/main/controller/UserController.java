@@ -28,6 +28,12 @@ public class UserController {
         return userService.fetchUserDetailsList();
     }
     
+    @GetMapping("/userAllDetails")
+    public List<User_details> fetchCompleteDepartmentList()
+    {
+        return userService.fetchAllUserDetailsList();
+    }
+    
 	@RequestMapping(value = "/userInfo", method =  RequestMethod.GET)
     public User_details findByUserNameandPassword(@RequestParam("userName") String userName,@RequestParam("password") String password)
     {
