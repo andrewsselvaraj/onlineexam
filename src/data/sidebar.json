@@ -1,0 +1,97 @@
+[
+    {
+        "title": "User",
+        "icon": "bi-person",
+        "childrens": [
+            {
+                "title": "View",
+                "icon": "bi-person-lines-fill",
+                "path": "/viewuser"
+            },
+            {
+                "title": "Create",
+                "icon": "bi-person-plus",
+                "path": "/createuser"
+            },
+            {
+                "title": "Edit",
+                "icon": "bi-pencil-square",
+                "path": "/edituser"
+                
+            }
+        ]
+    },
+    {
+        "title": "Company",
+        "icon": "bi-info-circle-fill",
+        "childrens": [
+            {
+                "title": "View",
+                "icon": "bi-person-lines-fill",
+                "path": "/viewcompany"
+            },
+            {
+                "title": "Create",
+                "icon": "bi-person-plus",
+                "path": "/createcompany"
+            },
+            {
+                "title": "Edit",
+                "icon": "bi-pencil-square",
+                "path": "/editcompany"
+            }
+        ]
+    },
+    {
+        "title": "Customer",
+        "icon": "bi-person-fill",
+        "childrens": [
+            {
+                "title": "View",
+                "icon": "bi-person-lines-fill",
+                "path": "/viewcustomer"
+            },
+            {
+                "title": "Create",
+                "icon": "bi-person-plus",
+                "path": "/createcustomer"
+            },
+            {
+                "title": "Edit",
+                "icon": "bi-pencil-square",
+                "path": "/editcustomer"
+            }
+        ]
+    },
+    {
+        "title": "Product",
+        "icon": "bi-view-list",
+        "childrens": [
+            {
+                "title": "View",
+                "icon": "bi-person-lines-fill",
+                "path": "/viewproduct"
+            },
+            {
+                "title": "Create",
+                "icon": "bi-person-plus",
+                "path": "/createproduct"   
+            },
+            {
+                "title": "Edit",
+                "icon": "bi-pencil-square",
+                "path": "/editproduct"   
+            }
+        ]
+    },
+    {
+        "title": "Support",
+        "icon": "bi-question-circle-fill",
+        "path": "/support"
+    },
+    {
+        "title": "Report Bug",
+        "icon": "bi-bug",
+        "path": "/report-bug"
+    }
+]
