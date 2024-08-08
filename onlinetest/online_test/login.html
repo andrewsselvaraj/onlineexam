@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Text Boxes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var counter = 1;
+
+            $("#addTextBox").click(function() {
+                var newTextBox = $('<input type="text" name="textbox' + counter + '">');
+                $("#textBoxContainer").append(newTextBox);
+                counter++;
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action="process.php" method="POST">
+        <div id="textBoxContainer">
+            <input type="text" name="textbox0">
+        </div>
+        <button type="button" id="addTextBox">Add additional Text box</button>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
