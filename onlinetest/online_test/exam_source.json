@@ -1,0 +1,37 @@
+[
+    { 
+            "question" : "Which is the capital of India?",
+            "qtype" : "text",
+            "optone" : "Chennai",
+            "opttwo" : "Delhi",
+            "optthree" : "Mumbai",
+            "optfour" : "Hydrabad" 
+    },
+
+    { 
+            "question" : "How many planets are in the solar system?",
+            "qtype" : "text",
+            "optone" : "9",
+            "opttwo" : "10",
+            "optthree" : "11",
+            "optfour" : "12" 
+    },
+
+    { 
+            "question" : "Select ELEPHANT from the following options:",
+            "qtype" : "image",
+            "optone" : "https://s-media-cache-ak0.pinimg.com/originals/2d/fb/d3/2dfbd38983291d3d0e5c1cb0667406b5.jpg",
+            "opttwo" : "https://s-media-cache-ak0.pinimg.com/originals/e3/48/19/e34819dd10cff77a959733c110cda901.jpg",
+            "optthree" : "http://www.pngmart.com/files/4/Cute-Cartoon-PNG-Picture.png",
+            "optfour" : "http://www.kidsworldfun.com/images/story-contest/2016-2/elephant-cartoon.png" 
+    },
+
+    { 
+            "question" : "Who is the Father Of Computer?",
+            "qtype" : "text",
+            "optone" : "Charles Barbage",
+            "opttwo" : "Newton",
+            "optthree" : "Einsteen",
+            "optfour" : "Thomas" 
+    }
+]
