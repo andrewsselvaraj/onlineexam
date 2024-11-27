@@ -18,8 +18,8 @@ import io.jsonwebtoken.Jwts;
 public class UserServiceImpl implements UserService{
 
 	@Autowired
-	
     private UserRepository userRepository;
+	
 	@Override
 	public List<User_details> fetchUserDetailsList() {
 		// TODO Auto-generated method stub
@@ -68,10 +68,11 @@ public class UserServiceImpl implements UserService{
 	}
 	@Override
 	public List<User_details> fetchAllUserDetailsList() {
-List<User_details> x = userRepository.findAll();
+		List<User_details> x = userRepository.findAll();
 		
 		return x;
 	}
+
 
 
 }
